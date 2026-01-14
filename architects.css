@@ -42,6 +42,7 @@ section {
 /* dark03 */
 .light-gray {
   color: rgba(114, 114, 114, 1);
+  margin-top: -20px;
 }
 .text-primary {
   color: #ff900e;
@@ -56,6 +57,7 @@ section {
 .sponsers-companies {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  margin-top: 50px;
 }
 .sponsers-companies img {
   filter: grayscale(100%);
@@ -100,9 +102,9 @@ section {
   width: 100%;
 }
 
-/* features */
+/* teams */
 
-.features-img {
+.teams-img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
@@ -118,6 +120,51 @@ section {
 #quick-list {
   font-weight: 500;
 }
+
+/* feature */
+#feature-section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 10px;
+}
+.feature-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.feature-card {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  /* margin-bottom: 20px; */
+}
+.feature {
+  gap: 100px;
+}
+#experience-badge {
+  padding: 35px 40px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-left: -80px;
+  margin-top: -100px;
+}
+.experience-year {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.architect img {
+  width: 100%;
+}
+/* facts */
+.fact-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.fact-info {
+  max-width: 540px;
+  margin: 0 auto;
+}
 .fact {
   border: 1px solid #ff900e;
   display: flex;
@@ -125,8 +172,9 @@ section {
   align-items: center;
   justify-content: center;
   height: 240px;
-  max-width: 240px;
+  width: 240px;
   border-radius: 8px;
+  margin-top: 20px;
 }
 .fact-container {
   display: grid;
@@ -139,25 +187,26 @@ section {
   margin-top: 5px;
   margin-bottom: 10px;
 }
-/* facts */
-.fact-name {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-top: 10px;
+
+/* .fact-description {
+  max-width: 540px;
+} */
+/* footer */
+.footer-container {
+  background-color: rgba(255, 144, 14, 0.1);
+  padding: 30px;
+  text-align: center;
 }
 
-.fact-description {
-  max-width: 540px;
-  margin-top: 10px;
-}
 /* media query */
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
-  .teams {
+  .teams,
+  .feature {
     flex-direction: column;
   }
-  .features-img,
+  .teams-img,
   .fact-container,
   .sponsers-companies {
     grid-template-columns: repeat(1, 1fr);
@@ -169,6 +218,15 @@ section {
   .sponsers-companies {
     justify-items: center;
     gap: 24px;
+  }
+  #experience-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .sponsers-info,
+  .fact-info {
+    justify-items: center;
+    text-align: center;
   }
 }
 
@@ -182,12 +240,34 @@ section {
   .our-features {
     margin: 50px auto;
   }
-  .features-img {
+  .teams-img {
     margin: 0 auto;
   }
   .sponsers-companies,
-  .fact-container {
+  .fact-container,
+  .feature {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+  }
+  #experience-badge {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .architect {
+    width: 100%;
+  }
+  .sponsers-info,
+  .fact-info {
+    justify-items: center;
+    text-align: center;
+  }
+  .fact-container,
+  .sponsers-companies,
+  .banner-content {
+    justify-items: center;
+    gap: 25px;
+  }
+  #experience-badge {
+    padding: 10px 10px;
   }
 }
